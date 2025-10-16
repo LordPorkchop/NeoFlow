@@ -2,3 +2,4 @@
 /app/certificates/
 /app/__pycache__/
 /data/
+/logs/
