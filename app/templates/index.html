@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <script src="/static/js/theme.js" defer></script>
+    <script src="/static/js/index.js" defer></script>
+    
+</head>
+<body>
+    <h1>Home Page</h1>
+    <h2>Note: This site is still under development. Expect crashes, bugs and errors</h2>
+    <div class="navbar">
+        <div class="navbar-left">
+
+        </div>
+        <div class="navbar-right">
+            <div onclick="window.location.href='/adminconsole'" class="navbar-element" id="admin-console-referrer">
+                <img src="/static/img/admin-console.svg" alt="Admin Console">
+            </div>
+            <div onclick="window.location.href='/login'" class="navbar-element" id="login-page-referrer">
+                <img src="/static/img/login.svg" alt="Login">
+            </div>
+            <div class="navbar-element" onclick="window.location.href='/register'" id="register-page-referrer">
+                <img src="/static/img/register.svg">
+            </div>
+        </div>
+    </div>
+    
+    <button onclick="window.alert('Ew. No.')">Light theme</button>
+</body>
+</html>
