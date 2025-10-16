@@ -29,20 +29,6 @@ def index():
     return render_template('index.html')
 
 
-@main_bp.route("/api/<path:subpath>")
-def handleAPI(subpath):
-    if request.referrer is None:
-        abort(401)
-    elif request.method not in ["GET", "POST", "PUT", "DELETE"]:
-        abort(405)
-    else:
-        match subpath.lower():
-            case "ip":
-                return {"ip": request.remote_addr}
-            case _:
-                abort(404)
-
-
 @main_bp.route("/adminconsole", methods=["GET"])
 @login_required
 def handleAdminConsole():
@@ -51,7 +37,7 @@ def handleAdminConsole():
 
 @main_bp.route("/login", methods=["GET"])
 def handleLogin():
-    abort(501)
+    return url_for("auth.login")
 
 
 @main_bp.route("/dashboard", methods=["GET"])
