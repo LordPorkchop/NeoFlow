@@ -101,6 +101,19 @@
     opacity: 0.9;
 }
 
+.brand-logo p {
+    text-align: center;
+    color: var(--text-color);
+    font-family: Roboto;
+    font-size: 350%;
+    font-variant: normal;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+
+
 body.light-mode .navbar-element img {
     filter: invert(1);
 }
